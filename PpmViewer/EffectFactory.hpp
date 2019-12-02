@@ -1,11 +1,15 @@
 #pragma once
 #include "RemoveRedEffect.hpp"
+#include "RemoveGreenEffect.hpp"
+#include "RemoveBlueEffect.hpp"
+#include "NegateRed.hpp"
 
 enum class ImageEffectType
 {
 	RemoveRed = 1,
-	RemoveGreen,
-	RemoveBlue //TODO: add rest below
+	RemoveGreen = 2,
+	RemoveBlue = 3,//TODO: add rest below
+	NegateRed = 4
 };
 
 class EffectFactory
@@ -19,7 +23,19 @@ public:
 			return new RemoveRedEffect{};
 			break;
 
-		default: 
+		case ImageEffectType::RemoveGreen:
+			return new RemoveGreenEffect{};
+			break;
+
+		case ImageEffectType::RemoveBlue:
+			return new RemoveBlueEffect{};
+			break;
+
+		case ImageEffectType::NegateRed:
+			return new NegateRedEffect{};
+			break;
+
+		default:
 			break;
 		}
 	}

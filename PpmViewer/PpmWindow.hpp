@@ -12,7 +12,7 @@ class PpmWindow : public Fl_Double_Window
 {
 private:
 	Fl_Menu_Bar* _menu = nullptr;
-	Fl_Menu_Item _top_bar[8] = {
+	Fl_Menu_Item _top_bar[10] = {
 		{"&File", 0, 0, 0, FL_SUBMENU},
 		{"Open", FL_CTRL + 'o', openFileCallback, this},
 		{"Quit",	FL_CTRL + FL_F + 4, quitCallback, 0},
@@ -20,6 +20,8 @@ private:
 		{"&Effects", 0, 0, 0, FL_SUBMENU},
 		{"Remove Red", 0, applyEffect, (void*)ImageEffectType::RemoveRed},
 		{"Remove Green", 0, applyEffect, (void*)ImageEffectType::RemoveGreen},
+		{"Remove Blue", 0, applyEffect, (void*)ImageEffectType::RemoveBlue},
+		{"Negate Red", 0, applyEffect, (void*)ImageEffectType::NegateRed},
 		{0} //end of Effects dropdown
 	};
 	Fl_RGB_Image* _image = nullptr;
@@ -42,7 +44,7 @@ private:
 				doc,
 				current_window->x() + 10,
 				current_window->y() + 10,
-				doc->getWidth(),  
+				doc->getWidth(),
 				doc->getHeight() + MENU_HEIGHT,
 				text.c_str()
 				};
@@ -80,7 +82,7 @@ public:
 		_image_box = new Fl_Box{ 0, 0, w, h };
 	}
 
-	PpmWindow(PpmDocument* doc, int x, int y, int w, int h, const char* l) 
+	PpmWindow(PpmDocument* doc, int x, int y, int w, int h, const char* l)
 		: PpmWindow(x, y, w, h, l)
 	{
 		_doc = doc;

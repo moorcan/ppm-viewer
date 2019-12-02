@@ -488,6 +488,15 @@
     <ClInclude Include="RemoveRedEffect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RemoveGreenEffect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveBlueEffect.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NegateRed.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="bunny.ppm">
