@@ -7,9 +7,9 @@
 enum class ImageEffectType
 {
 	RemoveRed = 1,
-	RemoveGreen = 2,
-	RemoveBlue = 3,//TODO: add rest below
-	NegateRed = 4
+	RemoveGreen,
+	RemoveBlue,//TODO: add rest below
+	NegateRed
 };
 
 class EffectFactory
