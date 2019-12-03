@@ -3,13 +3,15 @@
 #include "RemoveGreenEffect.hpp"
 #include "RemoveBlueEffect.hpp"
 #include "NegateRed.hpp"
+#include "NegateGreen.hpp"
 
 enum class ImageEffectType
 {
 	RemoveRed = 1,
 	RemoveGreen,
 	RemoveBlue,//TODO: add rest below
-	NegateRed
+	NegateRed,
+	NegateGreen
 };
 
 class EffectFactory
@@ -35,6 +37,9 @@ public:
 			return new NegateRedEffect{};
 			break;
 
+		case ImageEffectType::NegateGreen:
+			return new NegateGreenEffect{};
+			break;
 		default:
 			break;
 		}
