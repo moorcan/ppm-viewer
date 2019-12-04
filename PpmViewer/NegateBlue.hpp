@@ -1,7 +1,8 @@
 #pragma once
 #include "PpmDocument.hpp"
 #include "ImageEffect.hpp"
-class NegateGreenEffect : public ImageEffect
+
+class NegateBlueEffect : public ImageEffect
 {
 public:
 	virtual void applyEffect(PpmDocument& doc)
@@ -11,7 +12,7 @@ public:
 			for (int j = 0; j < doc.getWidth(); j++)
 			{
 				Pixel& p = doc[i][j];
-				p.green = 255 - p.green;
+				p.blue = 255 - p.blue;
 
 				//not necessary as we're using references but it makes our intent more clear
 				doc[i][j] = p;
