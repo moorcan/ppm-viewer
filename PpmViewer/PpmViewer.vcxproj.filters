@@ -503,6 +503,9 @@
     <ClInclude Include="NegateBlue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="grayscale.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="bunny.ppm">
