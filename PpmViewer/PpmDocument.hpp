@@ -145,6 +145,16 @@ public:
 		return _file_name;
 	}
 
+	vector<vector<Pixel>> getRGBdata()
+	{
+		return _rgb_data;
+	}
+
+	void setRGBdata(vector<vector<Pixel>>& data_matrix)
+	{
+		_rgb_data = data_matrix;
+	}
+
 	void setFileName(const string& file_name)
 	{
 		_file_name = file_name;
@@ -160,10 +170,22 @@ public:
 		return _width;
 	}
 
+	void setHeight(int height)
+	{
+		_height = height;
+	}
+
+	void setWidth(int width)
+	{
+		_width = width;
+	}
+
 	string getImageFormat() const
 	{
 		return _format;
 	}
+
+	
 
 	void setImageFormat(string format)
 	{

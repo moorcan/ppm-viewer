@@ -16,6 +16,7 @@ public:
 	int red = -1;
 	int green = -1;
 	int blue = -1;
+	
 };
 
 istream& operator>>(istream& stream, Pixel& pixel)

@@ -282,16 +282,22 @@
     <ClInclude Include="FL\win32.H" />
     <ClInclude Include="FL\x.H" />
     <ClInclude Include="grayscale.hpp" />
+    <ClInclude Include="HighContrast.hpp" />
+    <ClInclude Include="HorizontalFlip.hpp" />
     <ClInclude Include="ImageEffect.hpp" />
     <ClInclude Include="NegateBlue.hpp" />
     <ClInclude Include="NegateGreen.hpp" />
     <ClInclude Include="NegateRed.hpp" />
     <ClInclude Include="Pixel.hpp" />
+    <ClInclude Include="pixelate.hpp" />
     <ClInclude Include="PpmDocument.hpp" />
     <ClInclude Include="PpmWindow.hpp" />
+    <ClInclude Include="RandomNoise.hpp" />
     <ClInclude Include="RemoveBlueEffect.hpp" />
     <ClInclude Include="RemoveGreenEffect.hpp" />
     <ClInclude Include="RemoveRedEffect.hpp" />
+    <ClInclude Include="rotate90.hpp" />
+    <ClInclude Include="VerticalFlip.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="blocks.ppm" />
